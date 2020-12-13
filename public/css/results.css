@@ -1,0 +1,71 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: #0c0c0c;
+}
+/* Main -------------- */
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0c0c0c;
+}
+.circ {
+  width: 40vw;
+  height: 40vw;
+  background: #f8f4f9;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#perc {
+  font-size: 18vh;
+}
+.score {
+  padding: 3vh 0;
+}
+button {
+  font-size: 2vh;
+  margin: 2vh 0;
+  border: none;
+  padding: 1vh 3vw;
+  background: #0197f6;
+  color: #f8f4f9;
+  border-radius: 20px;
+  cursor: pointer;
+}

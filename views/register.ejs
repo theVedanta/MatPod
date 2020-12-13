@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="left">
+                <img src="../assets/regi.svg" alt="">
+            </div>
+            <div class="right">
+                <h1>Register</h1>
+                <form action="/auth/register" method="POST">
+                    <div class="name">
+                        <h2>Let's start with the Name!</h2>
+                        <div class="input">
+                            <label for="fName">First Name</label>
+                            <input required autocomplete="off" type="text" name="fName">
+                        </div>
+                        <div class="input">
+                            <label for="lName">Last Name</label>
+                            <input required autocomplete="off" type="text" name="lName">
+                        </div>
+                        <div class="input">
+                            <label for="nick">Nickname</label>
+                            <input required autocomplete="off" type="text" name="nick" placeholder="What should we call you?">
+                        </div>
+                        <div class="msg"></div>
+                        <h3 class="next">Next &raquo;</h3>
+                    </div>
+                    <div class="email">
+                        <h2>Please provide your Email</h2>
+                        <div class="input">
+                            <label for="mail">E - Mail</label>
+                            <input required autocomplete="off" type="email" name="mail">
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <input required autocomplete="off" type="password" name="password">
+                        </div>
+                        <div class="input">
+                            <label for="password">Confirm Password</label>
+                            <input required autocomplete="off" type="password" name="passcon">
+                        </div>
+                        <div class="msg2"></div>
+                        <button type="submit">Done</button>
+                    </div>
+                </form>
+                <div class="no">
+                    <h5>Already have an account?&ensp;</h5><a href="/auth/login">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/reg.js"></script>
+</body>
+</html>

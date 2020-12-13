@@ -1,0 +1,110 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: url(../assets/edit.svg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  padding: 10vh 0;
+}
+form {
+  width: 70%;
+  border-radius: 25px;
+  background: #f8f4f9;
+  color: #0c0c0c;
+  box-shadow: 0 0 90px #0c0c0c6e;
+  padding: 4vh 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 5vh;
+  padding: 1vh 0;
+}
+form input {
+  border: #f46036 2px solid;
+  padding: 1vh 1vw;
+  width: 80%;
+  font-size: 2vh;
+  border-radius: 20px;
+}
+.q,
+.g {
+  margin-bottom: 5vh;
+}
+.optInp {
+  margin-bottom: 1vh;
+}
+button {
+  border: none;
+  background: #f46036;
+  color: #f8f4f9;
+  padding: 1vh 3vw;
+  border-radius: 20px;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0 3vw;
+}
+button:hover {
+  background: #e64215;
+}
+h2 {
+  text-align: left;
+  width: 80%;
+  padding-left: 0.6vw;
+}
+.btns {
+  margin: 2vh 0;
+}
+hr {
+  width: 83%;
+  padding: 1px;
+  background: #0c0c0c;
+  border-radius: 50px;
+  border: none;
+  margin: 2vh 0;
+  margin-bottom: 4vh;
+}
+h3 {
+  width: 80%;
+  padding-left: 0.6vw;
+  font-size: 2vh;
+  margin-bottom: 2vh;
+}

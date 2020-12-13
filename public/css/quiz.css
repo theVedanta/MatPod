@@ -1,0 +1,141 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: #0c0c0c;
+}
+/* Main ----------------------------------- */
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #f8f4f9;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  pointer-events: none;
+}
+.top h1 {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  margin: 3vh 0;
+  text-align: center;
+  padding: 0 5vw;
+  font-size: 4vh;
+}
+.bottom {
+  width: 100%;
+  height: 50%;
+  background: #f8f4f9;
+  position: relative;
+}
+.bar {
+  width: 70vw;
+  height: 30px;
+  background: #f8f4f9;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.3s;
+}
+.prog {
+  position: absolute;
+  top: 0;
+  border-radius: 50px;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.3s;
+  background: #0197f6;
+}
+.opts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.opt {
+  width: 46%;
+  height: 40%;
+  background: #0197f6;
+  margin: 1%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 3.6vh;
+  color: #f8f4f9;
+}
+.timeUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.bottom h2 {
+  font-size: 6vh;
+  color: #0c0c0c;
+  padding: 3vh 0;
+}
+.timeUp button {
+  border: none;
+  background: #f46036;
+  color: #f8f4f9;
+  padding: 2vh 6vw;
+  font-size: 4vh;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.timeUp button:hover {
+  background: #c22e05;
+}

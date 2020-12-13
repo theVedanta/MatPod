@@ -1,0 +1,165 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: #0c0c0c;
+}
+/* Main -------------- */
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../assets/log.svg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 80vw;
+  height: 80vh;
+  background: #f8f4f9;
+  border-radius: 30px;
+  display: flex;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left img {
+  width: 80%;
+}
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+h1 {
+  font-size: 6vh;
+  padding: 3vh 0;
+}
+form {
+  width: 60%;
+}
+input {
+  width: 100%;
+  border: 2px #f46036 solid;
+  background: transparent;
+  padding: 1vh 2vw;
+  margin: 1vh 0;
+  font-size: 2vh;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0c0c0c1f;
+}
+input::placeholder {
+  color: #c7c5c7;
+}
+button {
+  width: 100%;
+  border: none;
+  background: #f46036;
+  color: #f8f4f9;
+  font-size: 2vh;
+  padding: 1vh 0;
+  border-radius: 20px;
+  margin: 2vh 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background: #ec4a1e;
+}
+button:active {
+  transform: scale(0.95);
+}
+h4 {
+  font-size: 2vh;
+  position: relative;
+  width: 60%;
+  text-align: center;
+}
+h4::before,
+h4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 2px;
+  background: #777;
+}
+h4::before {
+  left: 0;
+}
+h4::after {
+  right: 0;
+}
+.social {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3vh;
+}
+.social a {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.social img {
+  width: 50%;
+}
+.social a:hover {
+  transform: scale(1.5);
+}
+.no {
+  display: flex;
+  margin: 2vh 0;
+}
+.no h5,
+.no a {
+  font-size: 1.6vh;
+}
+.no a {
+  color: #f46036;
+  text-decoration: underline 1px #f46036;
+}
+h2 {
+  color: #ec4a1e;
+  padding-bottom: 1.6vh;
+}

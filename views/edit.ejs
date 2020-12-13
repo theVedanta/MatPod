@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Edit</title>
+    <link rel="stylesheet" href="../../css/edit.css">
+</head>
+<body>
+    <main>
+        <form action="/pods/edit/<%= genre %>?_method=PUT" method="POST">
+            <h1>Edit <%= genre %></h1>
+
+            <% for (let i=0; i < quess.length; i++) { %>
+                <h2>Question <%= i + 1 %>:</h2>
+                <input class='q' autocomplete="off" required type="text" name="ques<%= i %>" value="<%= quess[i] %>" placeholder="Question">
+        
+                <% for (let opt of optss[i]) { %>
+                    <input class="optInp" autocomplete="off" required type="text" name="option<%= i %>" value="<%= opt %>" placeholder="Option">
+                <% } %>
+                <h3>Answer: <%= anss[i] %></h3>
+                <hr>
+            <% } %>
+    
+            <div class="btns">
+                <button type="submit">Done</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

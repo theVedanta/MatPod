@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - My Pods</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/pods.css">
+</head>
+<body>
+    <div class="side">
+        <h2><%= nick %></h2>
+        <div class="sideLinks">
+            <a class="link" href="/home"><i class="fas fa-home"></i>Home</a>
+            <a class="link" href="#"><i class="fas fa-comments"></i>Forums</a>
+            <a class="link" href="#"><i class="fas fa-money-check"></i>Discover</a>
+            <form action="/home/logout?_method=DELETE" method="POST">
+                <button class="link" type="submit"><i class="fas fa-sign-out-alt"></i>Logout</button>
+            </form>
+        </div>
+        <div class="set">
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Competitions</a>
+    </nav>
+
+    <main>
+        <h1>Your Pods:</h1>
+        <div class="cards">
+            <% for (let genre of genres) { %>
+                <div class="card">
+                    <h2><%= genre %></h2>
+                    <a href="pods/edit/<%= genre %>">Edit</a>
+                    <button class="del">Delete</button>
+                    <form action="/pods/delete/<%= genre %>?_method=DELETE" method="POST" class="sure">
+                        <h3>Are you sure you want to delete this Pod: <%= genre %>?</h3>
+                        <div style="display: flex" class="opts">
+                            <a class="no" href="#">No</a>
+                            <button type="submit">Yes</button>
+                        </div>
+                    </form>
+                </div>
+            <% } %>
+            <a href="/pods/add" class="card addCard">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+    </main>
+
+    <script src="../js/pods.js"></script>
+</body>
+</html>

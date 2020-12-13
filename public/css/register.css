@@ -1,0 +1,156 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: #0c0c0c;
+}
+/* Main -------------- */
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../assets/reg.svg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 80vw;
+  height: 80vh;
+  background: #f8f4f9;
+  border-radius: 30px;
+  display: flex;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left img {
+  width: 70%;
+}
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7vh 0;
+}
+h1 {
+  font-size: 6vh;
+  padding: 3vh 0;
+}
+form {
+  width: 70%;
+}
+.name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form h2 {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.input {
+  width: 100%;
+  margin: 1vh 0;
+}
+label {
+  padding-left: 1.4vw;
+  font-size: 2vh;
+  color: #0c0c0ca8;
+}
+input {
+  width: 100%;
+  border: 2px #0197f6 solid;
+  border-radius: 20px;
+  padding: 1vh 1.6vw;
+  font-size: 2vh;
+  background: transparent;
+}
+h3 {
+  background: #0197f6;
+  color: #f8f4f9;
+  padding: 1vh 2vw;
+  margin: 2vh 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+h3:hover {
+  background: #037cc7;
+}
+.no {
+  display: flex;
+  margin: 2vh 0;
+}
+.no h5,
+.no a {
+  font-size: 1.6vh;
+}
+.no a {
+  color: #0197f6;
+  text-decoration: underline 1px #0197f6;
+}
+.email {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+button {
+  border: none;
+  font-size: 2vh;
+  background: #0197f6;
+  color: #f8f4f9;
+  padding: 1vh 2vw;
+  margin: 2vh 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background: #037cc7;
+}
+.msg {
+  color: #f46036;
+  padding: 1vh 0;
+}
+.msg2 {
+  color: #f46036;
+  padding: 1vh 0;
+}

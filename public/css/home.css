@@ -1,0 +1,161 @@
+/* Fonts --------------------- */
+@font-face {
+  font-family: reg;
+  src: url(../fonts/Nexa\ Light\ 350.otf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/Nexa\ Bold\ 650.otf);
+}
+
+/* Standard --------------------- */
+html {
+  scroll-behavior: smooth;
+}
+::root {
+  --white: #f8f4f9;
+  --orange: #f46036;
+  --blue: #0c0c0c;
+  --black: #0197f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: b;
+}
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+body {
+  background: #f8f4f9;
+}
+/* Side ----------------------------- */
+.side {
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(315deg, #006eb3, #048ce0);
+  padding: 6vh 2vw;
+  color: #f8f4f9;
+}
+.side h2 {
+  font-size: 3.5vh;
+  padding: 0 1vw;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
+}
+.sideLinks {
+  height: 50%;
+  width: 100%;
+  margin-top: 9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 2vw;
+}
+.link {
+  color: #f8f4f9;
+  font-size: 2.8vh;
+  font-family: reg;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.link i {
+  margin-right: 1.4vw;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 30px;
+  background: #f8f4f9;
+  transition: all 0.3s;
+}
+.link:hover:after {
+  width: 65%;
+}
+.set {
+  position: fixed;
+  left: 14vw;
+  bottom: 1vh;
+  padding: 20px 20px;
+  font-size: 4vh;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.set:active {
+  transform: rotate(180deg);
+}
+/* Nav --------------------------------- */
+nav {
+  padding-top: 6vh;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+}
+nav a {
+  font-size: 2vh;
+  margin: 0 2vw;
+  transition: all 0.3s;
+}
+nav a:hover {
+  color: #048ce0;
+}
+/* Main -------------------------------- */
+main {
+  padding-top: 9vh;
+  padding-left: 23vw;
+  padding-right: 6vw;
+}
+main h1 {
+  padding: 4vh 0;
+}
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  width: 29%;
+  margin: 20px;
+  height: 30vh;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #0c0c0c60;
+  padding: 3vh 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card h2 {
+  font-size: 4vh;
+  padding: 1vh 0;
+  text-align: center;
+}
+.card button {
+  border: none;
+  background: #0197f6;
+  padding: 1vh 3vw;
+  font-size: 2.3vh;
+  border-radius: 20px;
+  color: #f8f4f9;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 1vh 0;
+}
+.card button:hover {
+  background: #006eb3;
+}
