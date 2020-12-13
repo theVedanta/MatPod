@@ -31,13 +31,13 @@
     <main>
         <h1>Your Pods:</h1>
         <div class="cards">
-            <% for (let quiz of quizzes) { %>
+            <% for (let genre of genres) { %>
                 <div class="card">
-                    <h2><%= Object.keys(quiz) %></h2>
-                    <a href="pods/edit/<%= Object.keys(quiz) %>">Edit</a>
+                    <h2><%= genre %></h2>
+                    <a href="pods/edit/<%= genre %>">Edit</a>
                     <button class="del">Delete</button>
-                    <form action="/pods/delete/<%= Object.keys(quiz) %>?_method=DELETE" method="POST" class="sure">
-                        <h3>Are you sure you want to delete this Pod: <%= Object.keys(quiz) %>?</h3>
+                    <form action="/pods/delete/<%= genre %>?_method=DELETE" method="POST" class="sure">
+                        <h3>Are you sure you want to delete this Pod: <%= genre %>?</h3>
                         <div style="display: flex" class="opts">
                             <a class="no" href="#">No</a>
                             <button type="submit">Yes</button>

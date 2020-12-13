@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="left">
+                <img src="../assets/login.svg" alt="">
+            </div>
+            <div class="right">
+                <h1>Login</h1>
+                <% if (messages.error) { %>
+                    <h2>No User with that Email!</h2>
+                <% } %>
+                <form action="/auth/login" method="POST">
+                    <input autocomplete="off" type="text" placeholder="E - Mail" name="mail">
+                    <input autocomplete="off" type="password" placeholder="Password" name="password">
+                    <button type="submit">Login</button>
+                </form>
+                <div class="no">
+                    <h5>Don't have an account?&ensp;</h5><a href="/auth/register">Sign Up</a>
+                </div>
+                <h4>Or Login with</h4>
+                <div class="social">
+                    <a href="#"><img src="../assets/icons/google.svg" alt=""></a>
+                    <a href="#"><img src="../assets/icons/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../assets/icons/twitter.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

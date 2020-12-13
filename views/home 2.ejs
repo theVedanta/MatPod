@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Home</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="side">
+        <h2><%= nick %></h2>
+        <div class="sideLinks">
+            <a class="link" href="/pods"><i class="fas fa-tasks"></i>My Pods</a>
+            <a class="link" href="#"><i class="fas fa-comments"></i>Forums</a>
+            <a class="link" href="#"><i class="fas fa-money-check"></i>Discover</a>
+            <form action="/home/logout?_method=DELETE" method="POST">
+                <button class="link" type="submit"><i class="fas fa-sign-out-alt"></i>Logout</button>
+            </form>
+        </div>
+        <div class="set">
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Competitions</a>
+    </nav>
+
+    <main>
+        <h1>Start a Quiz:</h1>
+        <form action="/home" method="POST" class="cards">
+            <% for (let genre of genres) { %>
+                <div class="card">
+                    <h2><%= genre %></h2>
+                    <button type="submit" name="genre" value="<%= genre %>">Start</button>
+                </div>
+            <% } %>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Add a Pod</title>
+    <link rel="stylesheet" href="../css/add.css">
+</head>
+<body>
+    <main>
+        <form action="add" method="POST">
+            <h1>Add a Pod</h1>
+
+            <% if (firstQues) { %>
+            <h2>Genre:</h2>
+            <input class="g" autocomplete="off" required type="text" name="genre" placeholder="Genre">
+            <% } %>
+
+            <h2>Question <%= quesDone %>:</h2>
+            <input class='q' autocomplete="off" required type="text" name="question" placeholder="Question">
+
+            <input autocomplete="off" required type="textarea" name="option" placeholder="Answer">
+        
+            <input autocomplete="off" required type="text" name="option" placeholder="Option 2">
+            <input autocomplete="off" required type="text" name="option" placeholder="Option 3">
+            <input autocomplete="off" required type="text" name="option" placeholder="Option 4">
+
+            <div class="btns">
+                <button name="sub" value="next" type="submit">Next</button>
+                <button name="sub" value="done" type="submit">Done</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

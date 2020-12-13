@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatPod - Quiz</title>
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+    <main>
+        <div class="top">
+            <h1>
+                Question <%= quesDone %>:
+                <br>
+                <%= ques %>
+            </h1>
+            <div class="bar">
+                <div class="prog"></div>
+            </div>
+        </div>
+        <form action="/quiz" method="POST" class="bottom">
+            <div class="opts">
+                <% for (let opt of opts) { %>
+                    <button type="submit" name="usrSubmission" value="<%= opt %>" class="opt"><%= opt %></button>
+                <% } %>
+            </div>
+
+            <div class="timeUp">
+                <h2>Time's Up!</h2>
+                <button>Next</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
